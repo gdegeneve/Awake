@@ -8,8 +8,8 @@
     <ProjectGuid>{0DBA7F7F-34E0-49F1-B613-91FCBA31DD30}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Insomnia</RootNamespace>
-    <AssemblyName>Insomnia</AssemblyName>
+    <RootNamespace>Awake</RootNamespace>
+    <AssemblyName>Awake</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

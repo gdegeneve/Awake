@@ -3,3 +3,6 @@
 /Insomnia/obj
 /\[Binaries\]/Debug
 /\[Binaries\]/Release/Insomnia.vshost.exe*
+/Awake/bin
+/Awake/obj
+/\[Binaries\]/Release/Awake.vshost.exe*

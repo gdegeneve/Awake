@@ -1,4 +1,4 @@
-﻿namespace Insomnia
+﻿namespace Awake
 {
     partial class MainTray
     {
@@ -37,12 +37,12 @@
             this.hours2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.foreverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startWithWindowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preventsSleepToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.httpawakecodeplexcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.mi_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.continousTick = new System.Windows.Forms.Timer(this.components);
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.preventsSleepToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.httpinsomniacodeplexcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cms_traymenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             // 
             this.notico_tray.ContextMenuStrip = this.cms_traymenu;
             this.notico_tray.Icon = ((System.Drawing.Icon)(resources.GetObject("notico_tray.Icon")));
-            this.notico_tray.Text = "Insomnia";
+            this.notico_tray.Text = "Awake";
             this.notico_tray.Visible = true;
             // 
             // cms_traymenu
@@ -63,7 +63,6 @@
             this.mi_exit});
             this.cms_traymenu.Name = "trayMenu";
             this.cms_traymenu.Size = new System.Drawing.Size(177, 120);
-            
             // 
             // preventSleepToolStripMenuItem
             // 
@@ -82,57 +81,51 @@
             // disabledToolStripMenuItem
             // 
             this.disabledToolStripMenuItem.Name = "disabledToolStripMenuItem";
-            this.disabledToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.disabledToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.disabledToolStripMenuItem.Text = "Disable";
             this.disabledToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
             // minutes15ToolStripMenuItem
             // 
-            this.minutes15ToolStripMenuItem.CheckOnClick = true;
             this.minutes15ToolStripMenuItem.Name = "minutes15ToolStripMenuItem";
-            this.minutes15ToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.minutes15ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.minutes15ToolStripMenuItem.Text = "15 Minutes";
             this.minutes15ToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
             // minutes30ToolStripMenuItem
             // 
-            this.minutes30ToolStripMenuItem.CheckOnClick = true;
             this.minutes30ToolStripMenuItem.Name = "minutes30ToolStripMenuItem";
-            this.minutes30ToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.minutes30ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.minutes30ToolStripMenuItem.Text = "30 Minutes";
             this.minutes30ToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
             // minutes45ToolStripMenuItem
             // 
-            this.minutes45ToolStripMenuItem.CheckOnClick = true;
             this.minutes45ToolStripMenuItem.Name = "minutes45ToolStripMenuItem";
-            this.minutes45ToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.minutes45ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.minutes45ToolStripMenuItem.Text = "45 Minutes";
             this.minutes45ToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
             // hour1ToolStripMenuItem
             // 
-            this.hour1ToolStripMenuItem.CheckOnClick = true;
             this.hour1ToolStripMenuItem.Name = "hour1ToolStripMenuItem";
-            this.hour1ToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.hour1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.hour1ToolStripMenuItem.Text = "1 Hour";
             this.hour1ToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
             // hours2ToolStripMenuItem
             // 
-            this.hours2ToolStripMenuItem.CheckOnClick = true;
             this.hours2ToolStripMenuItem.Name = "hours2ToolStripMenuItem";
-            this.hours2ToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.hours2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.hours2ToolStripMenuItem.Text = "2 Hours";
             this.hours2ToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
             // foreverToolStripMenuItem
             // 
             this.foreverToolStripMenuItem.Checked = true;
-            this.foreverToolStripMenuItem.CheckOnClick = true;
             this.foreverToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.foreverToolStripMenuItem.Name = "foreverToolStripMenuItem";
-            this.foreverToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.foreverToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.foreverToolStripMenuItem.Text = "Forever";
             this.foreverToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
@@ -143,6 +136,31 @@
             this.startWithWindowsToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.startWithWindowsToolStripMenuItem.Text = "Start with Windows";
             this.startWithWindowsToolStripMenuItem.Click += new System.EventHandler(this.startWithWindowsToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.preventsSleepToolStripMenuItem,
+            this.httpawakecodeplexcomToolStripMenuItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // preventsSleepToolStripMenuItem
+            // 
+            this.preventsSleepToolStripMenuItem.Enabled = false;
+            this.preventsSleepToolStripMenuItem.Name = "preventsSleepToolStripMenuItem";
+            this.preventsSleepToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.preventsSleepToolStripMenuItem.Text = "Copyright (c) 2014 Gerald Degeneve";
+            // 
+            // httpawakecodeplexcomToolStripMenuItem
+            // 
+            this.httpawakecodeplexcomToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.httpawakecodeplexcomToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.httpawakecodeplexcomToolStripMenuItem.Name = "httpawakecodeplexcomToolStripMenuItem";
+            this.httpawakecodeplexcomToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.httpawakecodeplexcomToolStripMenuItem.Text = "awake.codeplex.com";
+            this.httpawakecodeplexcomToolStripMenuItem.Click += new System.EventHandler(this.httpawakecodeplexcomToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -161,31 +179,6 @@
             this.continousTick.Enabled = true;
             this.continousTick.Interval = 10000;
             this.continousTick.Tick += new System.EventHandler(this.continousTick_Tick);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.preventsSleepToolStripMenuItem,
-            this.httpinsomniacodeplexcomToolStripMenuItem});
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // preventsSleepToolStripMenuItem
-            // 
-            this.preventsSleepToolStripMenuItem.Enabled = false;
-            this.preventsSleepToolStripMenuItem.Name = "preventsSleepToolStripMenuItem";
-            this.preventsSleepToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
-            this.preventsSleepToolStripMenuItem.Text = "Copyright (c) 2014 Gerald Degeneve";
-            // 
-            // httpinsomniacodeplexcomToolStripMenuItem
-            // 
-            this.httpinsomniacodeplexcomToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.httpinsomniacodeplexcomToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.httpinsomniacodeplexcomToolStripMenuItem.Name = "httpinsomniacodeplexcomToolStripMenuItem";
-            this.httpinsomniacodeplexcomToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
-            this.httpinsomniacodeplexcomToolStripMenuItem.Text = "http://insomnia.codeplex.com";
-            this.httpinsomniacodeplexcomToolStripMenuItem.Click += new System.EventHandler(this.httpinsomniacodeplexcomToolStripMenuItem_Click);
             // 
             // MainTray
             // 
@@ -218,7 +211,7 @@
         private System.Windows.Forms.ToolStripMenuItem disabledToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preventsSleepToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem httpinsomniacodeplexcomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem httpawakecodeplexcomToolStripMenuItem;
     }
 }
 

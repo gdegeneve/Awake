@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Insomnia.Properties {
+namespace Awake.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

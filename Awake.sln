@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insomnia", "Insomnia\Insomnia.csproj", "{0DBA7F7F-34E0-49F1-B613-91FCBA31DD30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awake", "Awake\Awake.csproj", "{0DBA7F7F-34E0-49F1-B613-91FCBA31DD30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
