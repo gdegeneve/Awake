@@ -52,7 +52,7 @@ namespace Insomnia
             this.Visible = false;
             this.ShowInTaskbar = false;
 
-            this.notico_tray.ShowBalloonTip(3000, "Insomnia", "Right click to configure", ToolTipIcon.Info);
+            this.notico_tray.ShowBalloonTip(3000, "Insomnia", "Right click to configure.", ToolTipIcon.Info);
 
         }
 
@@ -271,7 +271,6 @@ namespace Insomnia
         {
             Process.Start("http://insomnia.codeplex.com");
         }
-
 
     }
 }

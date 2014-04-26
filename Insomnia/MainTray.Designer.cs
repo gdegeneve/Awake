@@ -63,6 +63,7 @@
             this.mi_exit});
             this.cms_traymenu.Name = "trayMenu";
             this.cms_traymenu.Size = new System.Drawing.Size(177, 120);
+            
             // 
             // preventSleepToolStripMenuItem
             // 
@@ -197,6 +198,7 @@
 
         }
 
+        
         #endregion
 
         private System.Windows.Forms.NotifyIcon notico_tray;
