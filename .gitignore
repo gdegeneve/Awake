@@ -2,4 +2,4 @@
 /src/Awake/bin
 /src/Awake/obj
 /bin/Debug
-*.vshost.exe
+*.vshost.exe*
