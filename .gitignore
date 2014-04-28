@@ -3,3 +3,4 @@
 /src/Awake/obj
 /bin/Debug
 *.vshost.exe*
+/deploy
