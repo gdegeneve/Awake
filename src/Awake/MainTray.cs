@@ -17,6 +17,7 @@ namespace Awake
     public partial class MainTray : Form
     {
         private int _idleTime = 0;
+        private bool _IsAutoStart = false;
         private uint _prevExecutionState;
 
         private RegistryKey _regPath = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
@@ -62,6 +63,10 @@ namespace Awake
                 if (_regPath.GetValue("AwakeDonGeatschOS") != null)
                 {
                     string path = _regPath.GetValue("AwakeDonGeatschOS", "").ToString();
+
+                    if (path == Application.ExecutablePath.ToString())
+                        _IsAutoStart = true;
+
                     if (!string.IsNullOrEmpty(path) && (!File.Exists(path) || path != Application.ExecutablePath.ToString()))
                     {
                         _regPath.DeleteValue("AwakeDonGeatschOS", false);
@@ -79,16 +84,6 @@ namespace Awake
             {
                 item.MenuItem.Checked = false;
             }
-        }
-
-        private void continousTick_Tick(object sender, EventArgs e)
-        {
-            SetState();
-        }
-
-        private void httpawakecodeplexcomToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("http://awake.codeplex.com");
         }
 
         private void LoadApplicationState()
@@ -123,19 +118,6 @@ namespace Awake
                 notico_tray.Icon = Resources.CrazyEye_Open;
                 foreverToolStripMenuItem.Checked = true;
             }
-        }
-
-        private void MainTray_Load(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            this.ShowInTaskbar = false;
-
-            this.notico_tray.ShowBalloonTip(3000, "Awake", "Right click to configure.", ToolTipIcon.Info);
-        }
-
-        private void mi_exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void SaveApplicationState()
@@ -188,6 +170,32 @@ namespace Awake
             }
         }
 
+        #region Form Events
+
+        private void continousTick_Tick(object sender, EventArgs e)
+        {
+            SetState();
+        }
+
+        private void httpawakecodeplexcomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://awake.codeplex.com");
+        }
+
+        private void MainTray_Load(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            this.ShowInTaskbar = false;
+
+            if (!_IsAutoStart)
+                this.notico_tray.ShowBalloonTip(3000, "Awake", "Right click to configure.", ToolTipIcon.Info);
+        }
+
+        private void mi_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void startWithWindowsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveApplicationState();
@@ -201,6 +209,8 @@ namespace Awake
 
             SaveApplicationState();
         }
+
+        #endregion Form Events
     }
 
     public class SleepState
