@@ -18,12 +18,20 @@ namespace Awake
 
         public const uint ES_USER_PRESENT = 0x00000004;
 
+        public const uint WM_SYSCOMMAND = 0x112;
+
+        public const uint SC_MONITORPOWER = 0xF170;
+
         [DllImport("user32.dll")]
         public static extern bool GetLastInputInfo(ref LASTINPUTINFO plii);
 
         [DllImport("kernel32.dll")]
         public static extern uint SetThreadExecutionState(uint esFlags);
 
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, uint wMsg, IntPtr wParam, IntPtr lParam);
+
+        
         public struct LASTINPUTINFO
         {
             public uint cbSize;

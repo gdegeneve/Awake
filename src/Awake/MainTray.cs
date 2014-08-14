@@ -19,6 +19,8 @@ namespace Awake
         private int _idleTime = 0;
         private bool _IsAutoStart = false;
         private uint _prevExecutionState;
+        private volatile bool _IsLock = false;
+        private volatile bool _IsDarkOnLock = false;
 
         private RegistryKey _regPath = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
         private RegistryKey _regSettings = Registry.CurrentUser.CreateSubKey("SOFTWARE\\" + Application.ProductName + "\\" + Application.ProductVersion);
@@ -28,6 +30,9 @@ namespace Awake
         public MainTray()
         {
             InitializeComponent();
+
+            SystemEvents.SessionSwitch += SystemEvents_SessionSwitch;
+            
             _states.Add(new SleepState(3, this.minutes15ToolStripMenuItem, Resources.CrazyEye_Sleepy));
             _states.Add(new SleepState(30, this.minutes30ToolStripMenuItem, Resources.CrazyEye_Sleepy));
             _states.Add(new SleepState(45, this.minutes45ToolStripMenuItem, Resources.CrazyEye_Sleepy));
@@ -39,11 +44,6 @@ namespace Awake
             CleanUpRunConfig();
 
             LoadApplicationState();
-        }
-
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
         }
 
         private void CleanUpRunConfig()
@@ -118,6 +118,16 @@ namespace Awake
                 notico_tray.Icon = Resources.CrazyEye_Open;
                 foreverToolStripMenuItem.Checked = true;
             }
+
+            try
+            {
+                disableOnLockScreenToolStripMenuItem.Checked = ((int)_regSettings.GetValue("DeactivateOnLock", 0)) == 0 ? false : true;
+                monitorOffOnLockScreenToolStripMenuItem.Checked = ((int)_regSettings.GetValue("ForceBlackScreenOnLock", 0)) == 0 ? false : true;
+
+            }
+            catch
+            {
+            }
         }
 
         private void SaveApplicationState()
@@ -134,6 +144,15 @@ namespace Awake
             var state = _states.FirstOrDefault(s => s.MenuItem.Checked);
             notico_tray.Icon = state.Icon;
             _regSettings.SetValue("Period", state.Period, RegistryValueKind.DWord);
+
+            try
+            {
+                _regSettings.SetValue("DeactivateOnLock", disableOnLockScreenToolStripMenuItem.Checked ? 1 : 0, RegistryValueKind.DWord);
+                _regSettings.SetValue("ForceBlackScreenOnLock", monitorOffOnLockScreenToolStripMenuItem.Checked ? 1 : 0, RegistryValueKind.DWord);
+            }
+            catch
+            {
+            }
         }
 
         private void SetIdleTime()
@@ -160,13 +179,19 @@ namespace Awake
 
             var state = _states.FirstOrDefault(s => s.MenuItem.Checked);
 
-            if (state.Period != -1 && _idleTime > state.Period)
+            if ((state.Period != -1 && _idleTime > state.Period) || (_IsLock && (disableOnLockScreenToolStripMenuItem.Checked)))
             {
                 _prevExecutionState = Win32Wrapper.SetThreadExecutionState(Win32Wrapper.ES_CONTINUOUS);
             }
             else
             {
                 _prevExecutionState = Win32Wrapper.SetThreadExecutionState(Win32Wrapper.ES_CONTINUOUS | Win32Wrapper.ES_DISPLAY_REQUIRED | Win32Wrapper.ES_SYSTEM_REQUIRED);
+            }
+
+            if (_IsLock && monitorOffOnLockScreenToolStripMenuItem.Checked && !_IsDarkOnLock)
+            {
+                Win32Wrapper.SendMessage(this.Handle, Win32Wrapper.WM_SYSCOMMAND, (IntPtr)Win32Wrapper.SC_MONITORPOWER, (IntPtr)2);
+                _IsDarkOnLock = true;
             }
         }
 
@@ -196,9 +221,10 @@ namespace Awake
             Application.Exit();
         }
 
-        private void startWithWindowsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void saveStateMenuItem_Click(object sender, EventArgs e)
         {
             SaveApplicationState();
+
         }
 
         private void toolStripMenuItem_Click(object sender, EventArgs e)
@@ -210,22 +236,20 @@ namespace Awake
             SaveApplicationState();
         }
 
+        void SystemEvents_SessionSwitch(object sender, SessionSwitchEventArgs e)
+        {
+            if (e.Reason == SessionSwitchReason.SessionLock)
+            {
+                _IsLock = true;
+            }
+            else if (e.Reason == SessionSwitchReason.SessionUnlock)
+            {
+                _IsLock = false;
+            }
+            _IsDarkOnLock = false;
+        }
+
         #endregion Form Events
     }
 
-    public class SleepState
-    {
-        public Icon Icon { get; set; }
-
-        public ToolStripMenuItem MenuItem { get; set; }
-
-        public int Period { get; set; }
-
-        public SleepState(int period, ToolStripMenuItem menuItem, Icon icon)
-        {
-            this.Period = period;
-            this.MenuItem = menuItem;
-            this.Icon = icon;
-        }
-    }
 }
