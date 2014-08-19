@@ -36,18 +36,18 @@
             this.hour1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hours2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.foreverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.lockScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.disableOnLockScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monitorOffOnLockScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startWithWindowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.preventsSleepToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.httpawakecodeplexcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.mi_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.continousTick = new System.Windows.Forms.Timer(this.components);
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.lockScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.disableOnLockScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.monitorOffOnLockScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cms_traymenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +70,7 @@
             this.toolStripMenuItem1,
             this.mi_exit});
             this.cms_traymenu.Name = "trayMenu";
-            this.cms_traymenu.Size = new System.Drawing.Size(177, 154);
+            this.cms_traymenu.Size = new System.Drawing.Size(177, 132);
             // 
             // preventSleepToolStripMenuItem
             // 
@@ -89,42 +89,42 @@
             // disabledToolStripMenuItem
             // 
             this.disabledToolStripMenuItem.Name = "disabledToolStripMenuItem";
-            this.disabledToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.disabledToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.disabledToolStripMenuItem.Text = "Disable";
             this.disabledToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
             // minutes15ToolStripMenuItem
             // 
             this.minutes15ToolStripMenuItem.Name = "minutes15ToolStripMenuItem";
-            this.minutes15ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.minutes15ToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.minutes15ToolStripMenuItem.Text = "15 Minutes";
             this.minutes15ToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
             // minutes30ToolStripMenuItem
             // 
             this.minutes30ToolStripMenuItem.Name = "minutes30ToolStripMenuItem";
-            this.minutes30ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.minutes30ToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.minutes30ToolStripMenuItem.Text = "30 Minutes";
             this.minutes30ToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
             // minutes45ToolStripMenuItem
             // 
             this.minutes45ToolStripMenuItem.Name = "minutes45ToolStripMenuItem";
-            this.minutes45ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.minutes45ToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.minutes45ToolStripMenuItem.Text = "45 Minutes";
             this.minutes45ToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
             // hour1ToolStripMenuItem
             // 
             this.hour1ToolStripMenuItem.Name = "hour1ToolStripMenuItem";
-            this.hour1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hour1ToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.hour1ToolStripMenuItem.Text = "1 Hour";
             this.hour1ToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
             // hours2ToolStripMenuItem
             // 
             this.hours2ToolStripMenuItem.Name = "hours2ToolStripMenuItem";
-            this.hours2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hours2ToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.hours2ToolStripMenuItem.Text = "2 Hours";
             this.hours2ToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
@@ -133,9 +133,39 @@
             this.foreverToolStripMenuItem.Checked = true;
             this.foreverToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.foreverToolStripMenuItem.Name = "foreverToolStripMenuItem";
-            this.foreverToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.foreverToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.foreverToolStripMenuItem.Text = "Forever";
             this.foreverToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(173, 6);
+            // 
+            // lockScreenToolStripMenuItem
+            // 
+            this.lockScreenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.disableOnLockScreenToolStripMenuItem,
+            this.monitorOffOnLockScreenToolStripMenuItem});
+            this.lockScreenToolStripMenuItem.Name = "lockScreenToolStripMenuItem";
+            this.lockScreenToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.lockScreenToolStripMenuItem.Text = "Lock Screen";
+            // 
+            // disableOnLockScreenToolStripMenuItem
+            // 
+            this.disableOnLockScreenToolStripMenuItem.CheckOnClick = true;
+            this.disableOnLockScreenToolStripMenuItem.Name = "disableOnLockScreenToolStripMenuItem";
+            this.disableOnLockScreenToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.disableOnLockScreenToolStripMenuItem.Text = "Disable Awake";
+            this.disableOnLockScreenToolStripMenuItem.Click += new System.EventHandler(this.saveStateMenuItem_Click);
+            // 
+            // monitorOffOnLockScreenToolStripMenuItem
+            // 
+            this.monitorOffOnLockScreenToolStripMenuItem.CheckOnClick = true;
+            this.monitorOffOnLockScreenToolStripMenuItem.Name = "monitorOffOnLockScreenToolStripMenuItem";
+            this.monitorOffOnLockScreenToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.monitorOffOnLockScreenToolStripMenuItem.Text = "Turn off the display (once)";
+            this.monitorOffOnLockScreenToolStripMenuItem.Click += new System.EventHandler(this.saveStateMenuItem_Click);
             // 
             // startWithWindowsToolStripMenuItem
             // 
@@ -144,6 +174,11 @@
             this.startWithWindowsToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.startWithWindowsToolStripMenuItem.Text = "Start with Windows";
             this.startWithWindowsToolStripMenuItem.Click += new System.EventHandler(this.saveStateMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(173, 6);
             // 
             // aboutToolStripMenuItem
             // 
@@ -187,41 +222,6 @@
             this.continousTick.Enabled = true;
             this.continousTick.Interval = 10000;
             this.continousTick.Tick += new System.EventHandler(this.continousTick_Tick);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(173, 6);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(173, 6);
-            // 
-            // lockScreenToolStripMenuItem
-            // 
-            this.lockScreenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.disableOnLockScreenToolStripMenuItem,
-            this.monitorOffOnLockScreenToolStripMenuItem});
-            this.lockScreenToolStripMenuItem.Name = "lockScreenToolStripMenuItem";
-            this.lockScreenToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.lockScreenToolStripMenuItem.Text = "Lock Screen";
-            // 
-            // disableOnLockScreenToolStripMenuItem
-            // 
-            this.disableOnLockScreenToolStripMenuItem.CheckOnClick = true;
-            this.disableOnLockScreenToolStripMenuItem.Name = "disableOnLockScreenToolStripMenuItem";
-            this.disableOnLockScreenToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.disableOnLockScreenToolStripMenuItem.Text = "Disable Awake";
-            this.disableOnLockScreenToolStripMenuItem.Click += new System.EventHandler(this.saveStateMenuItem_Click);
-            // 
-            // monitorOffOnLockScreenToolStripMenuItem
-            // 
-            this.monitorOffOnLockScreenToolStripMenuItem.CheckOnClick = true;
-            this.monitorOffOnLockScreenToolStripMenuItem.Name = "monitorOffOnLockScreenToolStripMenuItem";
-            this.monitorOffOnLockScreenToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.monitorOffOnLockScreenToolStripMenuItem.Text = "Turn Monitor Off (once)";
-            this.monitorOffOnLockScreenToolStripMenuItem.Click += new System.EventHandler(this.saveStateMenuItem_Click);
             // 
             // MainTray
             // 
