@@ -11,7 +11,8 @@
 	<copyright>2018 Gerald Degeneve</copyright>
     <projectUrl>https://github.com/gdegeneve/Awake</projectUrl>
 	<licenseUrl>https://github.com/gdegeneve/Awake/blob/master/LICENSE.md</licenseUrl>
-	<projectSourceUrl>https://github.com/gdegeneve/Awake</projectSourceUrl>
+	<projectSourceUrl>https://github.com/gdegeneve/Awake/tree/master/src</projectSourceUrl>
+	<packageSourceUrl>https://github.com/gdegeneve/Awake/tree/master/deploy</packageSourceUrl>
 	<tags>sleep hibernate lock idle screensaver</tags>
     <iconUrl>https://github.com/gdegeneve/Awake/blob/master/img/icon.png</iconUrl>
     <releaseNotes>New project home.</releaseNotes>
