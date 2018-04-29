@@ -15,7 +15,9 @@ Awake does not change any system settings, therefore it does not require adminis
 
 ## Installation
 
-Download the latest release put it somewhere, start it and make your selections. 
+* Download the latest <a href="https://github.com/gdegeneve/Awake/releases">release</a>
+* Put the executable somewhere, where you like to keep it
+* Start it and make your selections.
 
 ### Latest Feature
 
