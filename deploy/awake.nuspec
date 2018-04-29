@@ -8,6 +8,7 @@
     <owners>gdegeneve</owners>
     <summary>Tool to prevent sleep.</summary>
     <description>Awake is a tool, that resides in system tray and prevents the computer from entering the idle state, thus successfully preventing it from automatically entering sleep/hibernation/the lock screen.</description>
+	<copyright>2018 Gerald Degeneve</copyright>
     <projectUrl>https://github.com/gdegeneve/Awake</projectUrl>
 	<packageSourceUrl>https://github.com/gdegeneve/Awake</packageSourceUrl>
     <tags>sleep hibernate lock idle screensaver</tags>
@@ -17,5 +18,7 @@
   <files>
     <file src="tools\**" target="tools" />
 	<file src="..\bin\Release\Awake.exe" target="tools" />
+	<file src="..\LICENSE.md" target="tools" />
+	<file src="..\VERIFICATION.md" target="tools" />
   </files>
 </package>
