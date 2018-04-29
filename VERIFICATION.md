@@ -2,7 +2,9 @@
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-Any binaries will be identical to the releases published on 
+This package is published by Gerald Degeneve who also created this software.
+
+All binaries will be identical to the releases published on 
 https://github.com/gdegeneve/Awake/releases
 
 The fourth version number of the nuget package is only incremented to indicate 

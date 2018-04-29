@@ -10,8 +10,9 @@
     <description>Awake is a tool, that resides in system tray and prevents the computer from entering the idle state, thus successfully preventing it from automatically entering sleep/hibernation/the lock screen.</description>
 	<copyright>2018 Gerald Degeneve</copyright>
     <projectUrl>https://github.com/gdegeneve/Awake</projectUrl>
-	<packageSourceUrl>https://github.com/gdegeneve/Awake</packageSourceUrl>
-    <tags>sleep hibernate lock idle screensaver</tags>
+	<licenseUrl>https://github.com/gdegeneve/Awake/blob/master/LICENSE.md</licenseUrl>
+	<projectSourceUrl>https://github.com/gdegeneve/Awake</projectSourceUrl>
+	<tags>sleep hibernate lock idle screensaver</tags>
     <iconUrl>https://github.com/gdegeneve/Awake/blob/master/img/icon.png</iconUrl>
     <releaseNotes>New project home.</releaseNotes>
   </metadata>
