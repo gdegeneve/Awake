@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Awake")]
 [assembly: AssemblyDescription("Prevents Computer from entering idle state.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("awake.codeplex.com")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Awake")]
-[assembly: AssemblyCopyright("© 2014 Gerald Degeneve")]
+[assembly: AssemblyCopyright("© 2018 Gerald Degeneve")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
