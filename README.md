@@ -13,15 +13,15 @@ If you have full administrative access to your PC or no exchange policy or other
 
 Awake does not change any system settings, therefore it does not require administrative privileges. It merely calls Windows API functions to reset the idle timers. This is basically what video players (at least the better ones) do to avoid screen savers and power settings interfering with video playback.
 
+## Installation
+
+Download the latest release put it somewhere, start it and make your selections. 
+
 ### Latest Feature
 
 Since last release a new menu was added, that allows you to define actions, when the lock screen (WIN+L) is (manually) entered.
 
 ![awake](https://github.com/gdegeneve/Awake/blob/master/img/lock_screen_action.png)
-
-### Installation
-
-Download the latest release put it somewhere, start it and make your selections. 
 
 ## Acknowledgments
 
