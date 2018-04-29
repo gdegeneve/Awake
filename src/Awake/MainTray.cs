@@ -204,7 +204,7 @@ namespace Awake
 
         private void httpawakecodeplexcomToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("http://awake.codeplex.com");
+            Process.Start("https://github.com/gdegeneve/Awake");
         }
 
         private void MainTray_Load(object sender, EventArgs e)

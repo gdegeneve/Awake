@@ -202,7 +202,7 @@
             this.httpawakecodeplexcomToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.httpawakecodeplexcomToolStripMenuItem.Name = "httpawakecodeplexcomToolStripMenuItem";
             this.httpawakecodeplexcomToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
-            this.httpawakecodeplexcomToolStripMenuItem.Text = "awake.codeplex.com";
+            this.httpawakecodeplexcomToolStripMenuItem.Text = "https://github.com/gdegeneve/Awake";
             this.httpawakecodeplexcomToolStripMenuItem.Click += new System.EventHandler(this.httpawakecodeplexcomToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
