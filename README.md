@@ -2,7 +2,7 @@
 
 Awake is a tool, that resides in system tray and prevents the computer from entering the idle state, thus successfully preventing it from automatically entering sleep/hibernation/the lock screen.
 
-[[https://github.com/gdegeneve/Awake/blob/master/img/awake_forever.png|alt=awake]]
+![awake](https://github.com/gdegeneve/Awake/blob/master/img/awake_forever.png)
 
 ### Purpose
 
@@ -17,7 +17,7 @@ Awake does not change any system settings, therefore it does not require adminis
 
 Since last release a new menu was added, that allows you to define actions, when the lock screen (WIN+L) is (manually) entered.
 
-[[https://github.com/gdegeneve/Awake/blob/master/img/lock_screen_action.png|alt=lockscreen]]
+![awake](https://github.com/gdegeneve/Awake/blob/master/img/lock_screen_action.png)
 
 ### Installation
 
